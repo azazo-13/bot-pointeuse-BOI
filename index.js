@@ -204,7 +204,7 @@ async function handleEnd(interaction) {
       .addFields(
         { name: "👤 Employé", value: `**${name}**`, inline: true },
         { name: "⏱ Heures travaillées", value: `**${data.hours} h**`, inline: true },
-        { name: "💶 Salaire", value: `**${data.salary} €**`, inline: true }
+        { name: "💵 Salaire", value: `**${data.salary} $**`, inline: true }
       )
       .setFooter({ text: "Fin de service enregistrée" })
       .setTimestamp();
@@ -212,7 +212,7 @@ async function handleEnd(interaction) {
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setCustomId("pointeuse:paie")
-        .setLabel("💶 Payer")
+        .setLabel("💵 Payer")
         .setStyle(ButtonStyle.Success)
     );
 
@@ -260,11 +260,11 @@ if (!hasPermission) {
   if (oldEmbed) {
     newEmbed = EmbedBuilder.from(oldEmbed)
       .setColor("Green")
-      .setDescription("💶 Paiement validé ! Ce message sera supprimé dans 30 secondes.");
+      .setDescription("💵 Paiement validé ! Ce message sera supprimé dans 30 secondes.");
   } else {
     newEmbed = new EmbedBuilder()
       .setColor("Green")
-      .setDescription("💶 Paiement validé ! Ce message sera supprimé dans 30 secondes.");
+      .setDescription("💵 Paiement validé ! Ce message sera supprimé dans 30 secondes.");
   }
 
   // Désactiver le bouton
