@@ -82,7 +82,7 @@ client.on("interactionCreate", async interaction => {
     const embed = new EmbedBuilder()
       .setTitle("🕒 Gestion des Pointages")
       .setDescription("Utilisez les réactions pour enregistrer votre présence :\n\n🟢 **Commencer le service**\n🔴 **Terminer le service**")
-      .setColor("#FFA500") // Orange
+      .setColor("#0002BA") // Bleur Foncer
       .setFooter({ text: "Pointage automatique", iconURL: "https://files.catbox.moe/rfaerg.png" })
       .setTimestamp();
 
