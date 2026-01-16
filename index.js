@@ -233,8 +233,8 @@ async function handlePaie(interaction) {
   
   // 🔒 Vérification des rôles autorisés
 const ROLE_IDS = [
-  "789402678379544576",
-  "1458255225684234513"
+  "1458255225684234513", // Rôle test sur serveur test
+  "1458861878959935690" // Derector 
 ];
 
 const hasPermission = interaction.member.roles.cache
